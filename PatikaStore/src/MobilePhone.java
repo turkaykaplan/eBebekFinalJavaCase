@@ -4,11 +4,14 @@ import java.util.Scanner;
 public class MobilePhone extends MobilePhoneProducts {
     private static final ArrayList<MobilePhone> allMobilePhones = new ArrayList<>();
     private  Scanner input = new Scanner(System.in);
+    public static int mobilePhoneId=1;
+
 
     public MobilePhone() {}
 
-    public MobilePhone(int id, String name, double price, int discountRate, int stock, double screenSize, int ram, int memory, BrandList brand, int battery, String color) {
-        super(id, name, price, discountRate, stock, screenSize, ram, memory, brand, battery, color);
+    public MobilePhone( String name, double price, int discountRate, int stock, double screenSize, int ram, int memory, BrandList brand, int battery, String color) {
+        super(mobilePhoneId, name, price, discountRate, stock, screenSize, ram, memory, brand, battery, color);
+        mobilePhoneId++;
     }
 
     public void menuMobilePhone() {
@@ -34,6 +37,16 @@ public class MobilePhone extends MobilePhoneProducts {
                 break;
         }
     }
+    
+        public static int getMobilePhoneId() {
+        return mobilePhoneId;
+        }
+
+        public static void setMobilePhoneId(int mobilePhoneId) {
+        MobilePhone.mobilePhoneId = mobilePhoneId;
+        }
+    
+    
 
 
     public void addMobilePhoneItem() {
