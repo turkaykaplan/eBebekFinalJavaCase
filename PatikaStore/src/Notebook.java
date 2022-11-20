@@ -4,10 +4,13 @@ import java.util.Scanner;
 public class Notebook extends NotebookProducts {
     private final Scanner input = new Scanner(System.in);
     private static ArrayList<Notebook> allNotebooks = new ArrayList<>();
+    public static int notebookId=1;
+
     public Notebook() {}
-    public Notebook(int id, String name, double price, int discountRate, int stock,
+    public Notebook(String name, double price, int discountRate, int stock,
                     double screenSize, int ram, int memory, BrandList brand) {
-        super(id, name, price, discountRate, stock, screenSize, ram, memory, brand);
+        super(notebookId, name, price, discountRate, stock, screenSize, ram, memory, brand);
+        notebookId++;
     }
 
     public void menuNotebook() {
@@ -33,6 +36,19 @@ public class Notebook extends NotebookProducts {
                 break;
         }
     }
+    
+    
+        public static int getNotebookId() {
+        return notebookId;
+        }
+
+        public static void setNotebookId(int notebookId) {
+        Notebook.notebookId = notebookId;
+        }
+
+    
+    
+    
 
     public void addNotebookItem() {
         System.out.print("Benzersiz Notebook ID no girin: ");
