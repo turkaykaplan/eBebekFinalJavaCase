@@ -51,21 +51,19 @@ public class Notebook extends NotebookProducts {
     
 
     public void addNotebookItem() {
-        System.out.print("Benzersiz Notebook ID no girin: ");
-        int id = input.nextInt();
-        System.out.print("İsmi::");
+        System.out.print("İsmi:");
         String name = input.next();
-        System.out.print("Fiyatı");
+        System.out.print("Fiyatı:");
         double price = input.nextDouble();
-        System.out.print("İndirim Oranı: :");
+        System.out.print("İndirim Oranı: ");
         int discountRate = input.nextInt();
-        System.out.print("Ekran Boyutu:");
+        System.out.print("Ekran Boyutu: ");
         double screenSize = input.nextDouble();
-        System.out.print("RAM");
+        System.out.print("RAM: ");
         int ram = input.nextInt();
         System.out.print("Hafıza: ");
         int memory = input.nextInt();
-        System.out.print("Stok Miktarı:");
+        System.out.print("Stok Miktarı: ");
         int stock = input.nextInt();
 
         BrandList.printAllBrands();
