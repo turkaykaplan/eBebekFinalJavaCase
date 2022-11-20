@@ -53,7 +53,7 @@ public class Notebook extends NotebookProducts {
         int stock = input.nextInt();
 
         BrandList.printAllBrands();
-        System.out.print("ID No girin: ");
+        System.out.print("Marka: ");
         BrandList brand = BrandList.getBrand(input.nextInt());
         Notebook notebook = new Notebook(id, name, price, discountRate, stock, screenSize, ram, memory, brand);
         allNotebooks.add(notebook);
