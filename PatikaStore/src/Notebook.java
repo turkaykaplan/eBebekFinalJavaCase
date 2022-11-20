@@ -48,12 +48,11 @@ public class Notebook extends NotebookProducts {
 
     
     
-    
 
     public void addNotebookItem() {
-        System.out.print("İsmi:");
+        System.out.print("İsmi: ");
         String name = input.next();
-        System.out.print("Fiyatı:");
+        System.out.print("Fiyatı: ");
         double price = input.nextDouble();
         System.out.print("İndirim Oranı: ");
         int discountRate = input.nextInt();
@@ -90,7 +89,7 @@ public class Notebook extends NotebookProducts {
     }
     public void deleteNotebookItem() {
         getProduct();
-        System.out.print("Silinecek Notebook ID No:");
+        System.out.print("Silinecek Notebook ID No: ");
         int id = input.nextInt();
         allNotebooks.remove(id - 1);
         System.out.println("Listenin Son Hali ");
